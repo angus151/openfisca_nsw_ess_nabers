@@ -7,7 +7,7 @@ from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.general_ESS.hidden
 
 private = True
 #if private:
-    from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.NABERS_offices import coefficient_values as c
+from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.NABERS_offices import coefficient_values as c
 #else:
 #    from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.NABERS_offices import public_coefficient_values as c
 
