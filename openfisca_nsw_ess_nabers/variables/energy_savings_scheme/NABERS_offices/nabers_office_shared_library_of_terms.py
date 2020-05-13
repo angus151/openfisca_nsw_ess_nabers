@@ -4,7 +4,12 @@ from openfisca_core.model_api import *
 from openfisca_nsw_base.entities import *
 import numpy as np
 from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.general_ESS.hidden_figures import get_parameters
-from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.NABERS_offices import coefficient_values as c
+
+private = True
+#if private:
+from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.NABERS_offices.coefficient_values import has_real_values as c
+#else:
+#    from openfisca_nsw_ess_nabers.variables.energy_savings_scheme.NABERS_offices import public_coefficient_values as c
 
 if not(c.has_real_values):
     error = ("real coefficients aren't used, and return values will be incorrect")
